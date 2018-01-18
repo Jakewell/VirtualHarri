@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">VirtualHarri</string>
+    <string name="headline_text">VirtualHarri</string>
+    <string name="info_text">Automation services are running</string>
+</resources>
