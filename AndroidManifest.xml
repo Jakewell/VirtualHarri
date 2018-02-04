@@ -2,11 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fi.metropolia.virtualharri">
 
-    <!--
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    -->
 
     <application
         android:allowBackup="true"
@@ -27,7 +24,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-                <!--<action android:name="android.intent.action.ACTION_USER_PRESENT" />-->
             </intent-filter>
         </receiver>
 <!--

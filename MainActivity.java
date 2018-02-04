@@ -23,10 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // This needs to happen when the broadcast is received (when the new activity launches)
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN |
-                WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD |
-                WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED |
-                WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
     }
 }
 
@@ -36,10 +33,6 @@ class PowerConnectionReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
         Intent microsoftTeamsIntent = context.getPackageManager().getLaunchIntentForPackage("com" + ".microsoft.teams");
-
-        /*if(action.equals(Intent.ACTION_USER_PRESENT)){
-            Toast.makeText(context, "User is present", Toast.LENGTH_SHORT).show();
-        }*/
 
         if (action.equals(Intent.ACTION_POWER_CONNECTED)) {
             Log.e("Charger State", "power connected");
